@@ -23,6 +23,12 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
+        [
+        "expo-calendar",
+        {
+          "calendarPermission": "The app needs to access your calendar."
+        }
+      ],
       "expo-router",
       [
         "expo-splash-screen",
@@ -36,6 +42,15 @@
     ],
     "experiments": {
       "typedRoutes": true
-    }
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "28bcf598-8e5c-43b7-9511-defdabafc990"
+      }
+    },
+    "owner": "devendra-singh-biz4"
   }
 }
