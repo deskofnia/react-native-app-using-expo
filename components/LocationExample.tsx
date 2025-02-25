@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { View, Button, Text, StyleSheet, Alert } from 'react-native';
+import { View, Button, Text, StyleSheet } from 'react-native';
 import * as Location from 'expo-location';
 import { ThemedText } from './ThemedText';
 

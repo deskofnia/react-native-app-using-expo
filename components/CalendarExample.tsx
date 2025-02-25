@@ -8,9 +8,10 @@ export default function CalendarExample() {
     const [events, setEvents] = useState<Calendar.Event[]>([]);
 
     // console.log("calendars===>>>>", calendars);
-    console.log("events===>>>>", events);
+    // console.log("events===>>>>", events);
 
-    console.log(JSON.stringify(calendars, null, 2));
+    // console.log(JSON.stringify(calendars, null, 2));
+    console.log(JSON.stringify(events, null, 2));
 
 
     useEffect(() => {
@@ -99,15 +100,6 @@ export default function CalendarExample() {
             <Button title="Create Event" onPress={createEvent} />
             <Button title="Get Events" onPress={getEvents} />
             <Button title="Get All Calendars" onPress={getAllCalendars} />
-            {calendars.length > 0 && (
-                <View style={styles.calendarsContainer}>
-                    {calendars.map((calendar) => (
-                        <ThemedText key={calendar.id} style={styles.calendarText}>
-                            {calendar.title}
-                        </ThemedText>
-                    ))}
-                </View>
-            )}
             {events.length > 0 && (
                 <View style={styles.eventsContainer}>
                     {events.map((event) => (
@@ -117,6 +109,15 @@ export default function CalendarExample() {
                             </ThemedText>
                             <Button title="X" onPress={() => deleteEvent(event.id)} />
                         </View>
+                    ))}
+                </View>
+            )}
+            {calendars.length > 0 && (
+                <View style={styles.calendarsContainer}>
+                    {calendars.map((calendar) => (
+                        <ThemedText key={calendar.id} style={styles.calendarText}>
+                            {calendar.title}
+                        </ThemedText>
                     ))}
                 </View>
             )}
