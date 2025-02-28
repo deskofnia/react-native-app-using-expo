@@ -13,6 +13,7 @@ import CalendarExample from '../../components/CalendarExample';
 import CameraExample from '../../components/CameraExample';
 import ContactsExample from '../../components/ContactsExample';
 import FingerprintExample from '../../components/FingerprintExample';
+import IntentLauncherExample from '../../components/IntentLauncherExample';
 
 export default function HomeScreen() {
   return (
@@ -59,6 +60,10 @@ export default function HomeScreen() {
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 8: Fingerprint</ThemedText>
         <FingerprintExample />
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Step 9: Intent Launcher</ThemedText>
+        <IntentLauncherExample />
       </ThemedView>
     </ParallaxScrollView>
   );
